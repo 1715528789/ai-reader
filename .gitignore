@@ -1,0 +1,40 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build output
+dist
+dist-ssr
+*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# env & secrets (never commit API keys)
+.env
+.env.local
+.env.*.local
+
+# editors & OS
+.idea
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# temp / scratch
+*.timestamp-*.mjs
+vite.config.js.timestamp-*
+qa-*
+
+# local agent workspace (not for publishing)
+.workbuddy
+
+# 打包副本目录（内容与仓库源码重复，不应上传）
+GITHUB发布/
+ai-reader-standalone.html
