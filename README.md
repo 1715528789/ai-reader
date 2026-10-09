@@ -16,6 +16,23 @@
 
 ![界面截图](./docs/screenshot.png)
 
+## ⚡ 先试一下：单文件版（无需安装）
+
+仓库根目录的 **[`ai-reader-standalone.html`](./ai-reader-standalone.html)** 是一个 0.57 MB 的独立文件，
+**双击就能在浏览器打开使用**，不需要装 Node、不需要 `npm install`、不需要起服务器。
+
+适合想快速体验的人。下载 → 双击 → 用。
+
+<details>
+<summary>它是怎么实现的 / 有什么局限</summary>
+
+- 把整个应用（React + 所有组件 + 样式）内联进单个 HTML，双击即可打开
+- 局限：`file://` 协议下浏览器禁止加载 Worker，pdf.js 会退化为主线程解析 ——
+  **功能完全一致，大文件翻页略慢**
+- 想用完整性能请跑 `npm install && npm run dev`
+
+</details>
+
 ---
 
 ## 为什么做这个
@@ -108,7 +125,7 @@ npm run build:single        # → ai-reader-standalone.html
 - `index.html` 是开发专用入口，引用的是 `/src/main.jsx`，必须由 Vite 服务器处理
 - `dist/index.html` 虽然是相对路径，但 `type="module"` 脚本在 `file://` 协议下会被浏览器当作跨域资源拦截
 
-**想双击就能用，请用单文件版 `ai-reader-standalone.html`**（JS/CSS 全部内联，无需服务器）。
+**想双击就能用，请用单文件版 `ai-reader-standalone.html`**（JS/CSS 全部内联，无需服务器，已包含在本仓库中）。
 
 ---
 

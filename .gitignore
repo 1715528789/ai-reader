@@ -37,4 +37,7 @@ qa-*
 
 # 打包副本目录（内容与仓库源码重复，不应上传）
 GITHUB发布/
-ai-reader-standalone.html
+
+# 说明：ai-reader-standalone.html（单文件版）是有意提交的，
+# 让 clone 的人无需 npm install 即可双击使用。
+# 重新生成方式：npm run build:single
